@@ -455,21 +455,20 @@ Here’s a step-by-step guide to the process of creating, using, and merging bra
 1. Creating a New Branch
 To start working on a new feature or bug fix, you create a new branch. This allows you to work independently without affecting the main branch.
 Steps to create a branch:
-Make sure you’re on the main branch (or the branch from which you want to branch off): Copy git checkout main
+Make sure you’re on the main branch (or the branch from which you want to branch off): git checkout main
 Pull the latest changes to ensure your local repository is up to date with the remote repository:Copy git pull origin main
-Create a new branch and switch to it: Copy git checkout -b feature-branch-b tells Git to create a new branch.
+Create a new branch and switch to it: git checkout -b feature-branch-b tells Git to create a new branch.
 feature-branch is the name of the new branch you're creating. You can name the branch according to the feature or bug fix you are working on (e.g., feature/user-authentication).
 2. Making Changes in Your Branch
 Once you’ve created and switched to the new branch, you can begin making your changes.
 Typical steps:
 Edit, add, or delete files as required for the feature or bug fix.
-Stage the changes (to prepare them for committing): Copy git add .
+Stage the changes (to prepare them for committing): git add .
 This stages all changes in your working directory. You can stage specific files as well by replacing . with the file names.
 Commit the changes:Copy git commit -m "Implement user authentication feature"
 The commit message should briefly describe the changes you made.
 3. Pushing Your Branch to GitHub
-After committing your changes locally, you'll want to push your branch to GitHub, especially if you're collaborating with others or want to create a pull request.
-Copy git push origin feature-branch
+After committing your changes locally, you'll want to push your branch to GitHub, especially if you're collaborating with others or want to create a pull request. git push origin feature-branch
 This pushes the feature-branch to the remote repository on GitHub. Once the branch is pushed, it will appear on the GitHub repository page, where others can review it.
 4. Creating a Pull Request (PR) on GitHub
 A pull request (PR) is a request to merge your branch (containing your changes) into another branch (usually main or develop). It is the primary method for reviewing and discussing changes before they become part of the main codebase.
@@ -486,14 +485,14 @@ After merging, the changes in the feature branch will be integrated into the mai
 6. Deleting the Feature Branch
 After successfully merging the branch, it’s a good practice to delete the branch, especially if it’s no longer needed. This keeps the repository tidy.
 You can delete the branch both locally and remotely:
-Locally: Copy git branch -d feature-branch
-Remotely: Copy git push origin --delete feature-branch
+Locally: git branch -d feature-branch
+Remotely: git push origin --delete feature-branch
 7. Pulling Changes from Main Branch
 If you're working in a team, the main branch can change frequently. It’s a good idea to sync your branch with the latest changes from main to avoid conflicts when you eventually merge your branch.
-Switch to your main branch: Copy git checkout main
-Pull the latest changes from GitHub:Copy git pull origin main
-Switch back to your feature branch: Copy git checkout feature-branch
-Merge the latest changes from main into your feature branch: Copy git merge main
+Switch to your main branch: git checkout main
+Pull the latest changes from GitHub: git pull origin main
+Switch back to your feature branch: git checkout feature-branch
+Merge the latest changes from main into your feature branch: git merge main
 If there are any conflicts, Git will notify you, and you can resolve them manually. Once the conflicts are resolved, commit the changes and push the updated feature branch to GitHub.
 Why Branching is Essential for Collaborative Development
 Branching allows multiple developers to work on separate tasks in parallel without interrupting each other's progress. It creates a clean, organized way to manage feature development, bug fixes, and other changes. Here are the key reasons branching is essential:
@@ -552,7 +551,7 @@ Delete the feature branch (optional but recommended): After merging, you can del
 This helps keep the repository clean and organized.
 git branch -d feature-branch
 git push origin --delete feature-branch
-5. Sync Your Local Repository
+Sync Your Local Repository
 Once the pull request is merged, make sure to sync your local repository with the latest changes.
 Switch to the main branch: git checkout main
 Pull the latest changes from GitHub:git pull origin main
